@@ -7,16 +7,32 @@
 
 
 <h1 class="titulo">Formulário de Contato</h1>
-  <form action="https://formsubmit.co/joabebarreto542@gmail.com" method="POST" class="form" style="margin-bottom: 300px">
-    <label for="name">Nome</label>
-    <input type="text" name="name" id="name" required />
-    <label for="email">E-mail</label>
-    <input type="email" name="email" id="email" required />
-    <label for="message">Mensagem</label>
-    <textarea name="message" id="message" required></textarea>
-    <input type="hidden" name="_captcha" value="false" />
-    <input type="hidden" name="_next" value="http://127.0.0.1:5500/cont-obgd.html" />
-    <button type="submit">Enviar</button>
+  <form action="{{ route('add-produto') }}" method="post" class="form" style="margin-bottom: 300px">
+    @csrf
+    
+    <label for="nome">Nome do Produto</label>
+    <input type="text" name="nome" id="nome" value="Arroz" required />
+
+    <label for="descricao">Descrição</label>
+    <input type="text" name="descricao" id="descricao" value="Arroz Branco" required />
+
+    <label for="preco">Preço</label>
+    <input type="text" name="preco" id="preco" value="10.00" required />
+
+    <label for="quantidade">Quantidade</label>
+    <input type="number" name="quantidade" id="quantidade" value="100" required />
+    
+    <label for="categoria">Categoria</label>
+    <select name="categoria" id="categoria" required>
+      <option value="Alimentos">Alimentos</option>
+      <option value="Bebidas">Bebidas</option>
+      <option value="Higiene">Higiene</option>
+      <option value="Limpeza">Limpeza</option>
+      <option value="Outros">Outros</option>
+    </select> 
+    <br><br>
+    
+    <input type="submit">Enviar</input>
   </form>
 
 

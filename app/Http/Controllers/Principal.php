@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produto;
 
 class Principal extends Controller
 {
@@ -11,7 +12,8 @@ class Principal extends Controller
     }
 
     function masculino(){
-        return View('masculino');
+        $produtos = Produto::where('categoria', '=', 'bebidas')->get();
+        return View('masculino', $produtos);
     }
 
     function feminino(){
@@ -44,6 +46,13 @@ class Principal extends Controller
 
     function gerenciarProduto(){
         return View('admin/gerenciar-produto');
+    }
+
+    function addProduto(Request $dados) {
+        // dd($dados->all());
+        Produto::create($dados->all());
+        echo '<h1>Produto cadastrado com sucesso!<h1>';
+        // return view('confirmacao-produto');
     }
 
     

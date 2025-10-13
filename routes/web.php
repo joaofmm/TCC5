@@ -25,6 +25,8 @@ Route::get('/acessorios', [App\Http\Controllers\Principal::class, 'acessorios'])
 Route::get('/login', [App\Http\Controllers\Principal::class, 'login'])->name('pagina-login');
 Route::get('/gerenciar-produto', [App\Http\Controllers\Principal::class, 'gerenciarProduto'])->name('pagina-gerenciar-produto');
 
+Route::post('/add-produto', [App\Http\Controllers\Principal::class, 'addProduto'])->name('add-produto');
+
 
 
 
