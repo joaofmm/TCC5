@@ -24,11 +24,11 @@
     
     <label for="categoria">Categoria</label>
     <select name="categoria" id="categoria" required>
-      <option value="Alimentos">Alimentos</option>
-      <option value="Bebidas">Bebidas</option>
-      <option value="Higiene">Higiene</option>
-      <option value="Limpeza">Limpeza</option>
-      <option value="Outros">Outros</option>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+      <option value="time">Time</option>
+      <option value="kids">Kids</option>
+      <option value="acessórios">Acessórios</option>
     </select> 
     <br><br>
     

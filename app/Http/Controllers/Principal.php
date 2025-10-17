@@ -12,20 +12,23 @@ class Principal extends Controller
     }
 
     function masculino(){
-        $produtos = Produto::where('categoria', '=', 'bebidas')->get();
-        return View('masculino', $produtos);
+        $produtos = Produto::where('categoria', '=', 'masculino')->get();
+        return View('masculino', ['produtos' => $produtos]);
     }
 
     function feminino(){
-        return View('feminino');
+        $produtos = Produto::where('categoria', '=', 'feminino')->get();
+        return View('feminino', ['produtos' => $produtos]);
     }
 
     function time(){
-        return View('time');
+        $produtos = Produto::where('categoria', '=', 'time')->get();
+        return View('time', ['produtos' => $produtos]);
     }
 
     function kids(){
-        return View('kids');
+        $produtos = Produto::where('categoria', '=', 'kids')->get();
+        return View('kids', ['produtos' => $produtos]);
     }
 
     function sobre(){
@@ -37,7 +40,8 @@ class Principal extends Controller
     }
 
     function acessorios(){
-        return View('acessorios');
+        $produtos = Produto::where('categoria', '=', 'acessorios')->get();
+        return View('acessorios', ['produtos' => $produtos]);
     }
 
     function login(){

@@ -1,19 +1,11 @@
-{{-- IMPORTAÇÃO DO BODY --}}
-  @include('head.head')
+@include('head.head')
 
-  {{-- BARRA DE NAVEGAÇÃO --}}
-  @include('barra-navegacao.menu')
+@include('barra-navegacao.menu')
 
+@include('catalogo', ['catalogo_nome' => 'kids'])
 
+@include('carrinho')
 
+@include('listagem-produtos', $produtos);
 
-
-
-
-
-
-
-
-
-
-  @include('footer.footer')
+@include('footer.footer')
